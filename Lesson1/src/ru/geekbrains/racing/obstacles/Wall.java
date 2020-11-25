@@ -1,7 +1,6 @@
 package ru.geekbrains.racing.obstacles;
 
-import ru.geekbrains.racing.participant.Animal;
-import ru.geekbrains.racing.participant.Participantable;
+import ru.geekbrains.racing.participants.Participantable;
 
 public class Wall implements Obstaclable
 {

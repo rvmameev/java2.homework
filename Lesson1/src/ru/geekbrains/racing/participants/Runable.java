@@ -1,4 +1,4 @@
-package ru.geekbrains.racing.participant;
+package ru.geekbrains.racing.participants;
 
 public interface Runable
 {

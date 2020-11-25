@@ -1,7 +1,7 @@
 package ru.geekbrains.racing;
 
 import ru.geekbrains.racing.obstacles.*;
-import ru.geekbrains.racing.participant.*;
+import ru.geekbrains.racing.participants.*;
 
 public class Main
 {
