@@ -1,27 +1,32 @@
 package ru.geekbrains.racing;
 
-import ru.geekbrains.racing.obstacles.Cross;
-import ru.geekbrains.racing.obstacles.Obstacle;
-import ru.geekbrains.racing.obstacles.Wall;
-import ru.geekbrains.racing.obstacles.Water;
-import ru.geekbrains.racing.participants.*;
+import ru.geekbrains.racing.obstacles.*;
+import ru.geekbrains.racing.participant.*;
 
-public class Main {
-    public static void main(String[] args) {
-        Animal[] animals = {new Cat("Barsik", Color.RED), new Dog("Bobik", Color.BLACK), new Duck("Scrooge", Color.WHITE)};
-        Obstacle[] obstacles = {new Cross(100), new Wall(10), new Water(15)};
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Participantable[] participants = {
+            new Cat("Barsik", Color.RED),
+            new Dog("Bobik", Color.BLACK),
+            new Duck("Scrooge", Color.WHITE),
+            new Robot("T1000")
+        };
 
-        for (Animal a : animals) {
-            for (Obstacle o : obstacles) {
-                o.doIt(a);
-                if (!a.isOnDistance()) {
-                    break;
-                }
-            }
-        }
-        System.out.println("RESULTS:");
-        for (Animal p : animals) {
-            p.info();
-        }
+        Team team = new Team("Moon", participants);
+        team.info();
+
+        Obstaclable[] obstacles = {
+            new Cross(100),
+            new Wall(10),
+            new Water(15)
+        };
+
+        Course course = new Course(obstacles);
+
+        course.doIt(team);
+
+        team.infoResult();
     }
 }

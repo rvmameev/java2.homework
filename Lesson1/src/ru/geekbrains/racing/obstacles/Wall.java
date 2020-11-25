@@ -1,8 +1,10 @@
 package ru.geekbrains.racing.obstacles;
 
-import ru.geekbrains.racing.participants.Animal;
+import ru.geekbrains.racing.participant.Animal;
+import ru.geekbrains.racing.participant.Participantable;
 
-public class Wall extends Obstacle {
+public class Wall implements Obstaclable
+{
     private int height;
 
     public Wall(int height) {
@@ -10,7 +12,7 @@ public class Wall extends Obstacle {
     }
 
     @Override
-    public void doIt(Animal a) {
-        a.jump(height);
+    public void doIt(Participantable participant) {
+        participant.jump(height);
     }
 }

@@ -1,8 +1,9 @@
 package ru.geekbrains.racing.obstacles;
 
-import ru.geekbrains.racing.participants.Animal;
+import ru.geekbrains.racing.participant.Participantable;
 
-public class Cross extends Obstacle {
+public class Cross implements Obstaclable
+{
     private int length;
 
     public Cross(int length) {
@@ -10,7 +11,7 @@ public class Cross extends Obstacle {
     }
 
     @Override
-    public void doIt(Animal a) {
-        a.run(length);
+    public void doIt(Participantable participant) {
+        participant.run(length);
     }
 }
