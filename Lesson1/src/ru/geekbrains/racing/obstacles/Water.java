@@ -1,9 +1,9 @@
 package ru.geekbrains.racing.obstacles;
 
-import ru.geekbrains.racing.participants.Animal;
-import ru.geekbrains.racing.participants.Swimable;
+import ru.geekbrains.racing.participants.Participantable;
 
-public class Water extends Obstacle {
+public class Water implements Obstaclable
+{
     private int length;
 
     public Water(int length) {
@@ -11,12 +11,7 @@ public class Water extends Obstacle {
     }
 
     @Override
-    public void doIt(Animal a) {
-        if (a instanceof Swimable) {
-            ((Swimable) a).swim(length);
-        } else {
-            System.out.println(a.getColor().getEnglishColorName() + " " + a.getType() + " " + a.getName() + " - can't swim");
-            a.setOnDistance(false);
-        }
+    public void doIt(Participantable participant) {
+        participant.swim(length);
     }
 }

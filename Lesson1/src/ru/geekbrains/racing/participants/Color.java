@@ -1,6 +1,7 @@
 package ru.geekbrains.racing.participants;
 
-public enum Color {
+public enum Color
+{
     BLACK("Black", "Черный"),
     GREY("Grey", "Серый"),
     WHITE("White", "Белый"),
@@ -9,16 +10,19 @@ public enum Color {
     private String englishColorName;
     private String russianColorName;
 
-    Color(String englishColorName, String russianColorName) {
+    Color(String englishColorName, String russianColorName)
+    {
         this.englishColorName = englishColorName;
         this.russianColorName = russianColorName;
     }
 
-    public String getEnglishColorName() {
+    public String getEnglishColorName()
+    {
         return englishColorName;
     }
 
-    public String getRussianColorName() {
+    public String getRussianColorName()
+    {
         return russianColorName;
     }
 }
