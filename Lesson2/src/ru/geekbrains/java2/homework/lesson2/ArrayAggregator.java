@@ -14,8 +14,8 @@ public class ArrayAggregator
 
         for (String[] strings : array)
         {
-            if (array.length != SIZE_ARRAY || strings.length != SIZE_ARRAY)
-                throw new MyArraySizeException(array.length, strings.length);
+            if (array.length != SIZE_ARRAY || strings == null || strings.length != SIZE_ARRAY)
+                throw new MyArraySizeException(array.length, strings == null ? 0 : strings.length);
         }
     }
 
