@@ -42,7 +42,6 @@ public class MainPanel extends JPanel
         sendButton = new Button("Отправить");
 
         bottomPanel.add(sendButton, BorderLayout.EAST);
-
     }
 
     private void initListeners()
